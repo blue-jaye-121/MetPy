@@ -1482,6 +1482,9 @@ def vapor_pressure(pressure, mixing_ratio):
 @preprocess_and_wrap(wrap_like='temperature')
 @process_units({'temperature': '[temperature]'}, '[pressure]')
 def saturation_vapor_pressure(temperature, *, phase='liquid'):
+    """
+    Linfeng's version of 'saturation_vapor_pressure'. Added on Jul 3 2025
+    """
     r"""Calculate the saturation (equilibrium) water vapor (partial) pressure.
 
     Parameters
@@ -1547,6 +1550,9 @@ def saturation_vapor_pressure(temperature, *, phase='liquid'):
 @preprocess_and_wrap(wrap_like='temperature')
 @process_units({'temperature': '[temperature]'}, '[pressure]')
 def _saturation_vapor_pressure_liquid(temperature):
+    """
+    Linfeng's version of '_saturation_vapor_pressure_liquid'. Added on Jul 3 2025
+    """
     r"""Calculate saturation (equilibrium) water vapor (partial) pressure over liquid water.
 
     Parameters
@@ -1575,6 +1581,9 @@ def _saturation_vapor_pressure_liquid(temperature):
 @preprocess_and_wrap(wrap_like='temperature')
 @process_units({'temperature': '[temperature]'}, '[pressure]')
 def _saturation_vapor_pressure_solid(temperature):
+    """
+    Linfeng's version of '_saturation_vapor_pressure_solid'. Added on Jul 3 2025
+    """
     r"""Calculate the saturation water vapor (partial) pressure over solid water (ice).
 
     Parameters
@@ -1693,6 +1702,9 @@ def dewpoint(vapor_pressure):
     ignore_inputs_for_output=('molecular_weight_ratio',)
 )
 def mixing_ratio(partial_press, total_press, molecular_weight_ratio=mpconsts.nounit.epsilon):
+    """
+    Linfeng's version of 'mixing_ratio'. Added on Jul 3 2025
+    """
     r"""Calculate the mixing ratio of a gas.
 
     This calculates mixing ratio given its partial pressure and the total pressure of
