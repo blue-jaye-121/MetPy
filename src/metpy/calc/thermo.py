@@ -27,6 +27,8 @@ from ..package_tools import Exporter
 from ..units import check_units, concatenate, process_units, units
 from ..xarray import add_vertical_dim_from_xarray, preprocess_and_wrap
 
+import time
+
 exporter = Exporter(globals())
 
 
@@ -5170,6 +5172,7 @@ def scale_height(temperature_bottom, temperature_top):
     <Quantity(7556.2307, 'meter')>
 
     """
+    time.sleep(2)
     t_bar = 0.5 * (temperature_bottom + temperature_top)
     return (mpconsts.nounit.Rd * t_bar) / mpconsts.nounit.g
 
