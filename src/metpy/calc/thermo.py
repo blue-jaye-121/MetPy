@@ -663,6 +663,8 @@ def lcl(pressure, temperature, dewpoint, max_iters=None, eps=None):
        Renamed ``dewpt`` parameter to ``dewpoint``
 
     """
+    
+    pressure, temperature, dewpoint = np.atleast_1d(pressure, temperature, dewpoint)
     p_lcl, t_lcl = _calc_mod.lcl(pressure, temperature, dewpoint)
     return p_lcl, t_lcl
 
