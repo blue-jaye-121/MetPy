@@ -40,7 +40,7 @@ PYBIND11_MODULE(_calc_mod, m) {
             "Calculate relative humidity from temperature and dewpoint.",
             py::arg("temperature"), py::arg("dewpoint"), py::arg("phase"));
 
-    m.def("dry_lapse", &DryLapseVectorized,
+    m.def("dry_lapse", py::vectorize(DryLapse),
             "Calculate the temperature along a pressure profile assuming dry adiabatic process.",
             py::arg("pressure"), py::arg("ref_temperature"), py::arg("ref_pressure"));
 
