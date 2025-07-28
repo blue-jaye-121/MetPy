@@ -1,7 +1,8 @@
 name: Benchmark PR
 on:
   pull_request:
-    branches: [main]
+    #my testing branch is called benchmark_pr_action so I added it for testing
+    branches: [main, benchmark_pr_action]
     types: [opened, synchronize, reopened, labeled] #defaults and when labeled
   workflow_dispatch:
 
